@@ -16,11 +16,15 @@ class DetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(imageItem.tags),
       ),
-      body: Hero(
-        tag: imageItem.id,
-        child: Image.network(
-          imageItem.imageUrl,
-          fit: BoxFit.cover,
+      body: Container(
+        child: Center(
+          child: Hero(
+            tag: imageItem.id,
+            child: Image.network(
+              imageItem.imageUrl,
+              width: double.infinity,
+            ),
+          ),
         ),
       ),
     );
