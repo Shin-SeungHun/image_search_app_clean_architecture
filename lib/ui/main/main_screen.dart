@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import 'main_event.dart';
@@ -101,11 +102,16 @@ class _MainScreenState extends State<MainScreen> {
                         itemCount: state.imageItems.length,
                         itemBuilder: (context, index) {
                           final imageItem = state.imageItems[index];
-                          return ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.network(
-                              imageItem.imageUrl,
-                              fit: BoxFit.cover,
+                          return GestureDetector(
+                            onTap: (){
+                              context.push('/detailScreen', extra: imageItem);
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.network(
+                                imageItem.imageUrl,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           );
                         },
