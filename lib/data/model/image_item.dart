@@ -8,10 +8,11 @@ part 'image_item.g.dart';
 @freezed
 class ImageItem with _$ImageItem {
   const factory ImageItem({
-    required String tags,
-    required String imageUrl,
     required int id,
+    required String imageUrl,
+    required String tags,
   }) = _ImageItem;
 
-  factory ImageItem.fromJson(Map<String, Object?> json) => _$ImageItemFromJson(json);
+  factory ImageItem.fromJson(Map<String, Object?> json) =>
+      _$ImageItemFromJson(json);
 }
