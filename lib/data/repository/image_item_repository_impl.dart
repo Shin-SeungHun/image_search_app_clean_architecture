@@ -1,9 +1,10 @@
 import 'package:image_search_app_clean_architecture/data/dto/image_dto.dart';
 import 'package:image_search_app_clean_architecture/data/mapper/image_mapper.dart';
 import '../../core/result.dart';
+import '../../domain/model/image_item.dart';
 import '../data_source/image_api.dart';
-import '../model/image_item.dart';
-import 'image_item_repository.dart';
+
+import '../../domain/repository/image_item_repository.dart';
 
 class ImageItemRepositoryImpl implements ImageItemRepository {
   final ImageApi _api;

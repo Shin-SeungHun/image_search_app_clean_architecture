@@ -1,10 +1,12 @@
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import '../data/model/image_item.dart';
+
 import '../di/di_setup.dart';
-import '../ui/detail/detail_screen.dart';
-import '../ui/main/main_screen.dart';
-import '../ui/main/main_view_model.dart';
+import '../domain/model/image_item.dart';
+import '../presentation/detail/detail_screen.dart';
+import '../presentation/main/main_screen.dart';
+import '../presentation/main/main_view_model.dart';
+
 
 final router = GoRouter(
   initialLocation: '/',
